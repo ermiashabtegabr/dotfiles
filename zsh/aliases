@@ -65,7 +65,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-alias wttr="curl wttr.in"
 alias fzfprev="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias vfzf='vim "$(fzf)"'
 

@@ -87,7 +87,7 @@ call plug#end()
 filetype plugin indent on
 
 colorscheme onedark
-"hi Normal guibg=NONE ctermbg=7
+hi Normal guibg=NONE ctermbg=7
 set background=dark
 
 let mapleader=" "
