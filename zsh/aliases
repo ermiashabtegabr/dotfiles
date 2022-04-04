@@ -1,0 +1,90 @@
+#!/bin/bash
+
+#kth
+alias kth="cd ~/Documents/kth"
+alias k01="cd ~/Documents/kth/1.Semester/id2201"
+alias k09="cd ~/Documents/kth/1.Semester/id2209"
+alias k09a="cd ~/Documents/kth/1.Semester/id2209/homeworks/ID2209"
+alias k14="cd ~/Documents/kth/1.Semester/id2214"
+alias k14a="cd ~/Documents/kth/1.Semester/id2214/assignments/id2214/assignments"
+alias k14n="cd ~/Documents/kth/1.Semester/id2214/notebooks"
+alias k21="cd ~/Documents/kth/1.Semester/id2221"
+alias k23="cd ~/Documents/kth/1.Semester/id2223"
+alias k23l="cd ~/Documents/kth/1.Semester/id2223/labs"
+alias k23rq="cd ~/Documents/kth/1.Semester/id2223/review_questions"
+alias k23s="cd ~/Documents/kth/1.Semester/id2223/slides"
+alias k03a="cd ~/Documents/kth/2.Semester/id2203/assignments"
+alias k03s="cd ~/Documents/kth/2.Semester/id2203/slides"
+alias kdh="cd ~/Documents/kth/2.Semester/dh2642"
+alias k11="cd ~/Documents/kth/2.Semester/id2211"
+alias k56="cd ~/Documents/kth/2.Semester/dd2356"
+
+#uio
+alias uio="cd ~/Documents/uio"
+
+#remote
+alias kinit="kinit -f ermiasha@KTH.SE"
+alias ifi="ssh ermiassh@login.ifi.uio.no"
+alias mvr="./mvremote.sh -u ermiassh -p Hjemmeeksamen/ -d IN2140/"
+alias killerl="for i in `ps -ef | grep erl | awk '{print $2}'`; do echo $i; kill -9 $i; done"
+alias mount="sshfs uio:in3000 ~/Documents/UIO/6.Semester/in3000"
+alias umount="umount ~/Documents/UIO/6.Semester/in3000" 
+alias dumount="diskutil umount ~/Documents/UIO/6.Semester/in3000" 
+
+#practice and projects
+alias prac="~/Documents/prac"
+alias pracr="~/Documents/prac/rust"
+alias webd="~/Documents/webdev"
+
+#rust
+alias cb="cargo build"
+alias cch="cargo check"
+alias cr="cargo run"
+alias cbr="cargo build && cargo run"
+
+#vim
+alias vim='/usr/local/Cellar/macvim/8.2-171_1/bin/vim'
+alias vimzsh="vim $ZDOTDIR/.zshrc && source $ZDOTDIR/.zshrc"
+alias srczsh="source $ZDOTDIR/.zshrc"
+alias vimrc="vim $HOME/.dotfiles/vim/.vimrc"
+alias vima="vim $ZDOTDIR/aliases && source $ZDOTDIR/.zshrc"
+alias vimpa="vim $ZDOTDIR/paths && source $ZDOTDIR/.zshrc"
+alias vimf="vim $ZDOTDIR/functions"
+alias vimp="vim ~/Documents/plan/plan.md"
+alias snips="cd $HOME/.dotfiles/vim/.vim/plugged/vim-snippets/snippets"
+alias dots="cd ~/.dotfiles"
+
+#git
+alias gits="git status"
+alias gita="git add ."
+alias gitl="git log"
+alias gitlo="git log --oneline"
+
+#folder nav
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+alias wttr="curl wttr.in"
+alias fzfprev="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+alias vfzf='vim "$(fzf)"'
+
+alias x="xplr"
+alias xcd='cd "$(xplr)"'
+
+alias dotr="dotnet run"
+alias dotb="dotnet build"
+alias dott="dotnet test"
+
+function file_modified() {
+	today=$(date +%s)
+	lastchange=$(stat -f '%m' $1)
+	timedelta=$((today-lastchange))
+
+	if [ $timedelta -gt 0 ] 
+	then
+		true
+	else 
+		false
+	fi
+}

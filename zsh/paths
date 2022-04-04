@@ -1,0 +1,34 @@
+#!/bin/bash
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+export KAFKA_HOME="$HOME/tools/kafka_2.13-3.0.0"
+export ES_HOME="$HOME/tools/elasticsearch-7.15.1"
+export KIBANA_HOME="$HOME/tools/kibana-7.15.1-darwin-x86_64"
+
+export TMUXP_CONFIGDIR="$HOME/.dotfiles/tmuxp"
+export VIM="$HOME/.dotfiles/vim"
+export VIMINIT="source $HOME/.dotfiles/vim/.vimrc"
+
+export MACOSX_DEPLOYMENT_TARGET=10.9
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+export PATH="/usr/local/scala/bin:$PATH"
+export PATH="/usr/local/spark/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/texlive/2021/bin/universal-darwin:$PATH"
+export PATH="/opt/anaconda3/bin:$PATH"
+export PATH="~/.gem/ruby/3.0.0/bin:$PATH"
+export PATH="$KAFKA_HOME/bin:$PATH"
+export PATH="$ES_HOME/bin:$PATH"
+export PATH="$KIBANA_HOME/bin:$PATH"
+export PATH="~/Desktop/nand2tetris/tools:$PATH"
+export PATH="${HOME}/.cargo/bin:${PATH}"
+
+# tool-specific settings
