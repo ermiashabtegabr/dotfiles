@@ -2,3 +2,11 @@ vim/*
 !vim/.vimrc
 
 zsh/.zcompdump-Ermias*
+zsh/.zprofile
+zsh/.dumpfile
+zsh/.zsh_history
+zsh/.git
+zsh/.zsh_sessions
+zsh/.gitignore
+zsh/.zshenv
+
