@@ -1,26 +1,26 @@
 #!/bin/bash
 
 #kth
-alias kth="cd ~/Documents/kth"
-alias k01="cd ~/Documents/kth/1.Semester/id2201"
-alias k09="cd ~/Documents/kth/1.Semester/id2209"
-alias k09a="cd ~/Documents/kth/1.Semester/id2209/homeworks/ID2209"
-alias k14="cd ~/Documents/kth/1.Semester/id2214"
-alias k14a="cd ~/Documents/kth/1.Semester/id2214/assignments/id2214/assignments"
-alias k14n="cd ~/Documents/kth/1.Semester/id2214/notebooks"
-alias k21="cd ~/Documents/kth/1.Semester/id2221"
-alias k23="cd ~/Documents/kth/1.Semester/id2223"
-alias k23l="cd ~/Documents/kth/1.Semester/id2223/labs"
-alias k23rq="cd ~/Documents/kth/1.Semester/id2223/review_questions"
-alias k23s="cd ~/Documents/kth/1.Semester/id2223/slides"
-alias k03a="cd ~/Documents/kth/2.Semester/id2203/assignments"
-alias k03s="cd ~/Documents/kth/2.Semester/id2203/slides"
-alias kdh="cd ~/Documents/kth/2.Semester/dh2642"
-alias k11="cd ~/Documents/kth/2.Semester/id2211"
-alias k56="cd ~/Documents/kth/2.Semester/dd2356"
+alias kth="~/Documents/kth"
+alias k01="~/Documents/kth/1.Semester/id2201"
+alias k09="~/Documents/kth/1.Semester/id2209"
+alias k09a="~/Documents/kth/1.Semester/id2209/homeworks/ID2209"
+alias k14="~/Documents/kth/1.Semester/id2214"
+alias k14a="~/Documents/kth/1.Semester/id2214/assignments/id2214/assignments"
+alias k14n="~/Documents/kth/1.Semester/id2214/notebooks"
+alias k21="~/Documents/kth/1.Semester/id2221"
+alias k23="~/Documents/kth/1.Semester/id2223"
+alias k23l="~/Documents/kth/1.Semester/id2223/labs"
+alias k23rq="~/Documents/kth/1.Semester/id2223/review_questions"
+alias k23s="~/Documents/kth/1.Semester/id2223/slides"
+alias k03a="~/Documents/kth/2.Semester/id2203/assignments"
+alias k03s="~/Documents/kth/2.Semester/id2203/slides"
+alias kdh="~/Documents/kth/2.Semester/dh2642"
+alias k11="~/Documents/kth/2.Semester/id2211"
+alias k56="~/Documents/kth/2.Semester/dd2356"
 
 #uio
-alias uio="cd ~/Documents/uio"
+alias uio="~/Documents/uio"
 
 #remote
 alias kinit="kinit -f ermiasha@KTH.SE"
@@ -34,6 +34,8 @@ alias dumount="diskutil umount ~/Documents/UIO/6.Semester/in3000"
 #practice and projects
 alias prac="~/Documents/prac"
 alias pracr="~/Documents/prac/rust"
+alias rkvs="~/Documents/prac/rust/kvstore"
+alias rgame="~/Documents/prac/rust/rust_games"
 alias webd="~/Documents/webdev"
 
 #rust
@@ -46,13 +48,14 @@ alias cbr="cargo build && cargo run"
 alias vim='/usr/local/Cellar/macvim/8.2-171_1/bin/vim'
 alias vimzsh="vim $ZDOTDIR/.zshrc && source $ZDOTDIR/.zshrc"
 alias srczsh="source $ZDOTDIR/.zshrc"
+alias vimmux="vim ~/.tmux.conf"
 alias vimrc="vim $HOME/.dotfiles/vim/.vimrc"
-alias vima="vim $ZDOTDIR/aliases && source $ZDOTDIR/.zshrc"
-alias vimpa="vim $ZDOTDIR/paths && source $ZDOTDIR/.zshrc"
-alias vimf="vim $ZDOTDIR/functions"
+alias vima="vim ~/.dotfiles/.aliases && source ~/.dotfiles/.aliases"
+alias vimpa="vim ~/.dotfiles/.paths && source ~/.dotfiles/.paths"
+alias vimf="vim ~/.dotfiles/.functions"
 alias vimp="vim ~/Documents/plan/plan.md"
-alias snips="cd $HOME/.dotfiles/vim/.vim/plugged/vim-snippets/snippets"
-alias dots="cd ~/.dotfiles"
+alias snips=" $HOME/.dotfiles/vim/.vim/plugged/vim-snippets/snippets"
+alias dots=" ~/.dotfiles"
 
 #git
 alias gits="git status"

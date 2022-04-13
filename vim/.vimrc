@@ -3,6 +3,7 @@ syntax on
 
 set noerrorbells
 set noshowmode
+set spell
 set belloff=all
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -215,8 +216,8 @@ nnoremap <C-i> <C-i>zz
 nnoremap <C-k> <C-u>zz
 nnoremap <C-j> <C-d>zz
 
-inoremap <C-k> <C-u>zz
-inoremap <C-j> <C-d>zz
+"inoremap <C-k> <C-u>zz
+"inoremap <C-j> <C-d>zz
 
 nnoremap 0 ^_
 nnoremap ^_ 0

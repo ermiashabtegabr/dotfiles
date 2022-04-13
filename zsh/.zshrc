@@ -16,10 +16,10 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $ZDOTDIR/aliases --source_only
-source $ZDOTDIR/paths --source_only
-source $ZDOTDIR/conda --source_only
-source $ZDOTDIR/functions --source_only
+source ~/.dotfiles/.aliases --source_only
+source ~/.dotfiles/.paths --source_only
+source ~/.dotfiles/.conda --source_only
+source ~/.dotfiles/.functions --source_only
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
