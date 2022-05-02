@@ -18,6 +18,8 @@ set noswapfile
 set nobackup
 set undodir=$VIM/.vim/undodir
 set undofile
+set grepprg=rg\ --vimgrep\ $*\/dev/null
+set grepformat^=%f:%l:%c:%m
 
 set incsearch
 set ignorecase
@@ -190,10 +192,10 @@ nnoremap <leader>h <C-w>h
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 
-nnoremap <leader>d :w<CR> :bn<CR> 
-nnoremap <leader>p :w<CR> :bp<CR>
-vnoremap <leader>d :w<CR> :bn<CR> 
-vnoremap <leader>p :w<CR> :bp<CR>
+nnoremap <leader>d :w<CR>:bn<CR> 
+nnoremap <leader>p :w<CR>:bp<CR>
+vnoremap <leader>d :w<CR>:bn<CR> 
+vnoremap <leader>p :w<CR>:bp<CR>
 inoremap <C-d> <Esc>0d$a
 inoremap <C-p> <Esc>bdei
 
@@ -236,10 +238,3 @@ vnoremap K :m '<-2<CR>gv=gv
 cnoremap <expr> / wildmenumode() ? "\<C-E>" : "/"
 cnoremap <C-k> <Up>
 cnoremap <C-j> <Down>
-
-"inoremap ' '<Esc>i'
-"inoremap " "<Esc>i"
-"inoremap ( (<Esc>i)
-"inoremap [ [<Esc>i]
-"inoremap { {<Esc>i}
-"inoremap < <<Esc>i>
