@@ -62,6 +62,7 @@ alias dots=" ~/.dotfiles"
 alias gits="git status"
 alias gita="git add ."
 alias gitl="git log"
+alias gitd="git diff"
 alias gitlo="git log --oneline"
 
 #folder nav
