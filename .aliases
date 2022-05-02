@@ -43,6 +43,7 @@ alias cb="cargo build"
 alias cch="cargo check"
 alias cr="cargo run"
 alias cbr="cargo build && cargo run"
+alias cbt="cargo build --tests"
 
 #vim
 alias vim='/usr/local/Cellar/macvim/8.2-171_1/bin/vim'
