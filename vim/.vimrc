@@ -50,6 +50,9 @@ call plug#begin('~/.dotfiles/vim/.vim/plugged')
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
 
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'folke/todo-comments.nvim'
+
 	Plug 'wakatime/vim-wakatime'
 	Plug 'tpope/vim-surround'
 
@@ -72,10 +75,10 @@ call plug#begin('~/.dotfiles/vim/.vim/plugged')
 
 	Plug 'cespare/vim-toml', { 'branch': 'main' }
 	Plug 'itchyny/lightline.vim'
-	"Plug 'morhetz/gruvbox'
+	Plug 'morhetz/gruvbox'
 	Plug 'sonph/onehalf', { 'rtp': 'vim' }
 	Plug 'drewtempelmeyer/palenight.vim'
-	Plug 'joshdick/onedark.vim'
+	"Plug 'joshdick/onedark.vim'
 
 	Plug 'ap/vim-css-color'
 	Plug 'mbbill/undotree'
@@ -89,7 +92,7 @@ call plug#begin('~/.dotfiles/vim/.vim/plugged')
 call plug#end()
 filetype plugin indent on
 
-colorscheme onedark
+colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=7
 set background=dark
 
@@ -119,7 +122,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:airline_powerline_fonts=1
 
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -154,7 +157,7 @@ autocmd VimEnter * if !argc() | NERDTree | endif
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 autocmd FileType nerdtree setlocal relativenumber
 
-autocmd FileType tex nmap <buffer> <C-T> :w<CR> :!latexmk -pdf % && latexmk -c<CR><CR>
+autocmd FileType tex nmap <buffer> <C-T> :w<CR> :!latexmk -shell-escape -pdf % && latexmk -c<CR><CR>
 autocmd FileType tex nmap <buffer> T :!open -a Skim %:r.pdf<CR><CR>
 autocmd FileType tex nmap <buffer> C :!latexmk -c<CR><CR>
 autocmd BufNewFile *_lec.tex,*_cpt.tex 0r ~/.vim/templates/notes-skeleton.tex

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+alias doc="~/Documents"
+
 #kth
 alias kth="~/Documents/kth"
 alias k01="~/Documents/kth/1.Semester/id2201"
@@ -44,6 +46,10 @@ alias cch="cargo check"
 alias cr="cargo run"
 alias cbr="cargo build && cargo run"
 alias cbt="cargo build --tests"
+
+#cljr
+alias lr="lein repl"
+alias lru="lein run"
 
 #vim
 alias vim='/usr/local/Cellar/macvim/8.2-171_1/bin/vim'

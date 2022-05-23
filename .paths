@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 export KAFKA_HOME="$HOME/tools/kafka_2.13-3.0.0"
 export ES_HOME="$HOME/tools/elasticsearch-7.15.1"
