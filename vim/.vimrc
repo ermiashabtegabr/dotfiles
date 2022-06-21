@@ -46,91 +46,92 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 set rtp+=$VIM/.vim
 call plug#begin('~/.dotfiles/vim/.vim/plugged')
 
-	Plug 'lervag/vimtex'
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'folke/todo-comments.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/todo-comments.nvim'
 
-	Plug 'wakatime/vim-wakatime'
-	Plug 'tpope/vim-surround'
+Plug 'wakatime/vim-wakatime'
+Plug 'tpope/vim-surround'
 
-	Plug 'junegunn/fzf.vim'
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-	Plug 'preservim/nerdtree'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 
-	Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'dense-analysis/ale'
-	Plug 'puremourning/vimspector'
-	Plug 'OmniSharp/omnisharp-vim'
-	Plug 'vim-erlang/vim-erlang-runtime'
-	Plug 'vim-erlang/vim-erlang-omnicomplete'
-	Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
+Plug 'puremourning/vimspector'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/fireplace.vim'
 
-	Plug 'cespare/vim-toml', { 'branch': 'main' }
-	Plug 'itchyny/lightline.vim'
-	Plug 'morhetz/gruvbox'
-	Plug 'sonph/onehalf', { 'rtp': 'vim' }
-	Plug 'drewtempelmeyer/palenight.vim'
-	"Plug 'joshdick/onedark.vim'
+Plug 'cespare/vim-toml', { 'branch': 'main' }
+Plug 'itchyny/lightline.vim'
+"Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'ap/vim-css-color'
+Plug 'mbbill/undotree'
 
-	Plug 'ap/vim-css-color'
-	Plug 'mbbill/undotree'
-
-	Plug 'dyng/ctrlsf.vim'
-	Plug 'tpope/vim-fugitive'
-	Plug 'vim-utils/vim-man'
-	Plug 'lyuts/vim-rtags'
-	Plug 'mbbill/undotree'
+Plug 'dyng/ctrlsf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-utils/vim-man'
+Plug 'lyuts/vim-rtags'
+Plug 'mbbill/undotree'
 
 call plug#end()
 filetype plugin indent on
 
-colorscheme gruvbox
+colorscheme onedark
 hi Normal guibg=NONE ctermbg=7
 set background=dark
 
 let mapleader=" "
-let g:netrw_browse_split=2
-let g:netrw_bufsettings = "noma nomod nu nowrap ro nobl"
-let g:netrw_banner=0
-let g:netrw_winsize=25
-let g:netrw_browse_split=4
-let g:netrw_altv=1
+"let g:netrw_browse_split=2
+"let g:netrw_bufsettings = "noma nomod nu nowrap ro nobl"
+"let g:netrw_banner=0
+"let g:netrw_winsize=25
+"let g:netrw_browse_split=4
+"let g:netrw_altv=1
 
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
+         \ "Modified"  : "✹",
+         \ "Staged"    : "✚",
+         \ "Untracked" : "✭",
+         \ "Renamed"   : "➜",
+         \ "Unmerged"  : "═",
+         \ "Deleted"   : "✖",
+         \ "Dirty"     : "✗",
+         \ "Clean"     : "✔︎",
+         \ 'Ignored'   : '☒',
+         \ "Unknown"   : "?"
+         \ }
 
 let g:airline_powerline_fonts=1
 
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+         \ 'colorscheme': 'onedark',
+         \ 'active': {
+            \   'left': [ [ 'mode', 'paste' ],
+            \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+            \ },
+            \ 'component_function': {
+               \   'gitbranch': 'FugitiveHead'
+               \ },
+               \ }
 
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_insert_leave = 1
@@ -138,8 +139,8 @@ let g:ale_lint_on_text_changed = 'normal'
 let g:rustfmt_autosave = 1
 
 let g:ale_linters = {
-\ 'cs': ['OmniSharp']
-\}
+         \ 'cs': ['OmniSharp']
+         \}
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -171,14 +172,14 @@ inoremap <silent><expr> <C-@> coc#refresh()
 inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+   let col = col('.') - 1
+   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 inoremap <silent><expr> <C-j>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<C-j>" :
-            \ coc#refresh()
+         \ pumvisible() ? "\<C-n>" :
+         \ <SID>check_back_space() ? "\<C-j>" :
+         \ coc#refresh()
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
@@ -216,10 +217,15 @@ nnoremap <leader>no :noh<CR>
 nnoremap n nzz
 nnoremap N Nzz
 
-nnoremap <C-o> <C-o>zz
-nnoremap <C-i> <C-i>zz
-nnoremap <C-k> <C-u>zz
-nnoremap <C-j> <C-d>zz
+nnoremap <C-o> <C-o>
+nnoremap <C-i> <C-i>
+nnoremap <C-k> <C-u>
+nnoremap <C-j> <C-d>
+
+vnoremap <C-o> <C-o>
+vnoremap <C-i> <C-i>
+vnoremap <C-k> <C-u>
+vnoremap <C-j> <C-d>
 
 "inoremap <C-k> <C-u>zz
 "inoremap <C-j> <C-d>zz
